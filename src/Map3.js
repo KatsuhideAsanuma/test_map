@@ -7,8 +7,8 @@ import mapStyles from "./mapUtils/mapStyles";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  height: "60vh",
-  width: "100%",
+  height: "100vh",
+  width: "100vw",
 };
 // 地図の大きさを指定します。
 
@@ -19,7 +19,7 @@ const options = {
   zoomControl: true,
 };
 
-export default function GoogleMapComponent() {
+export default function GoogleMapComponent(props) {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey:  "AIzaSyBnUSowUogycU2OrHMKp57a4MZg-oEoAaQ",
     // ここにAPIキーを入力します。今回は.envに保存しています。
